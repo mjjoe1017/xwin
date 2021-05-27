@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Device } from './device';
 
 @Component({
   selector: 'app-root',
@@ -17,6 +18,13 @@ export class AppComponent {
 
   get devices() {
     return this.allDevices;
+  }
+
+  // 點擊該列選擇按鈕時顯示當前設備名稱、測點名稱
+  selectDevice:string = '';  
+
+  onSelect(device: any): void {
+    this.selectDevice = device.device_name + ' - ' + device.signal_id;
   }
 
 }

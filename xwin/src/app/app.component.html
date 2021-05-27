@@ -47,11 +47,13 @@
         <td>{{ device.device_name }}</td>
         <td>{{ device.signal_id }}</td>
         <td>
-          <button type="button" class="btn btn-primary">選擇</button>
+          <button type="button" class="btn btn-primary" (click)="onSelect(device)">選擇</button>
         </td>
       </tr>
     </ng-container>
   </table>
   <br />
-  <div id="showSelectItem">選擇項目：</div>
+  <div id="showSelectItem">
+    選擇項目：<span>{{ selectDevice }}</span>
+  </div>
 
